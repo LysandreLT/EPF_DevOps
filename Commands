@@ -1,0 +1,1 @@
+docker run -d --network app-network --name db -v db_data:/var/lib/postgresql/data mydb

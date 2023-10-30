@@ -18,7 +18,7 @@ services:
 
   httpd:
     build:
-      context: ./HTTP
+      context: http
     ports:
       - "8080:80"
     networks:

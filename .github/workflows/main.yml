@@ -43,7 +43,7 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           context: ./simpleapi
           # Note: tags has to be all lower-case
-          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops
+          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops:backend
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
@@ -51,7 +51,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./backend/simple-api-student
-          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops
+          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops:database
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 
@@ -59,7 +59,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: ./http
-          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops
+          tags: ${{secrets.LOGIN_DOCKER}}/tp-devops:http
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}
 

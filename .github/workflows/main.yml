@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v2.5.0
 
       - name: Login to DockerHub
-        run: docker login -u ${{ secrets.LOGIN_DOCKER }} -p ${{ secrets.PASSWORD_DOCKER }}
+        run: docker login -u ${{ secrets.LOGIN_DOCKER }} -p ${{ secrets.TOKEN_DOCKER }}
 
       - name: Build image and push backend
         uses: docker/build-push-action@v3

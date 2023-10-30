@@ -45,7 +45,7 @@ jobs:
       - name: Build image and push database
         uses: docker/build-push-action@v3
         with:
-          context: ./backend
+          context: ./backend/simple-api-student
           tags: ${{secrets.LOGIN_DOCKER}}/tp-devops/backend
 
       - name: Build image and push httpd

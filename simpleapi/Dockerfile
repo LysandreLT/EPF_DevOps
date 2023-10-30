@@ -1,8 +1,8 @@
 FROM postgres:14.1-alpine
 
 ENV POSTGRES_DB=db
-   POSTGRES_USER=usr
-   POSTGRES_PASSWORD=pwd
+ENV POSTGRES_USER=usr
+ENV POSTGRES_PASSWORD=pwd
 
 # Build
 FROM maven:3.8.6-amazoncorretto-17 AS myapp-build

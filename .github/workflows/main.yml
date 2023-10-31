@@ -43,7 +43,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           # relative path to the place where source code with Dockerfile is located
-          context: ./simpleapi
+          context: ./backend/simple-api-student
           # Note: tags has to be all lower-case
           tags: ${{secrets.LOGIN_DOCKER}}/tp-devops:backend
           # build on feature branches, push only on main branch
@@ -52,7 +52,7 @@ jobs:
       - name: Build image and push database
         uses: docker/build-push-action@v3
         with:
-          context: ./backend/simple-api-student
+          context: ./database
           tags: ${{secrets.LOGIN_DOCKER}}/tp-devops:database
           # build on feature branches, push only on main branch
           push: ${{ github.ref == 'refs/heads/main' }}

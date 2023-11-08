@@ -1,0 +1,6 @@
+- name: Launch app
+  docker_container:
+    name: my-running-app
+    image: chambellan/backend:1.0
+    networks:
+      - name: app-network

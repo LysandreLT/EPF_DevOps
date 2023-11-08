@@ -1,0 +1,9 @@
+- name: Run HTTPD
+  docker_container:
+    name: http
+    ports:
+      - "80:80"
+    image: chambellan/frontend:latest
+    networks:
+      - name: app-network
+
